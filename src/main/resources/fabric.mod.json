@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "flint_mod",
+	"version": "${version}",
+	"name": "Flint Mod",
+	"description": "Adds loose flint to the world",
+	"authors": [
+		"MinecraftGuy926"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/flint_mod/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.mcguy.flint.FlintMod"
+		],
+		"client": [
+			"net.mcguy.flint.FlintModClient"
+		],
+		"fabric-datagen": [
+			"net.mcguy.flint.FlintModDataGenerator"
+		]
+	},
+	"mixins": [
+		"flint_mod.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.15",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
